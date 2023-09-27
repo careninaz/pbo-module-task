@@ -174,7 +174,7 @@ class ROG : ASUS
 // SubClass Vivobook Turunan Dari SuperClass ASUS Turunan Dari SuperClass Laptop
 class Vivobook : ASUS
 {
-    public Vivobook(Vga _vga, Processor _processor) : base("Vivobook", _tipe, _vga, _processor)
+    public Vivobook(Vga _vga, Processor _processor) : base( "Vivobook", _vga, _processor)
     {
 
     }
