@@ -5,28 +5,28 @@ class Vga
 {
     public string merk;
 
-    // Konstruktor Vga dengan parameter untuk menginisialisasi merk.
+    // Konstruktor Vga dengan parameter untuk menginisialisasi merk
     public Vga(string _merk)
     {
         this.merk = _merk;
     }
 }
 
-// SubClass AMD Turunan Dari Superclass Vga
+// SubClass AMD Pewarisan Dari Superclass Vga
 class AMD : Vga
 {
 
-    // Konstruktor AMD, menginisialisasi merk "AMD" melalui konstruktor superclass.
+    // Konstruktor AMD, menginisialisasi merk "AMD" melalui konstruktor superclass
     public AMD() : base("AMD")
     {
 
     }
 }
 
-// SubClass Nvidia Turunan Dari SuperClass Vga
+// SubClass Nvidia Pewarisan Dari SuperClass Vga
 class Nvidia : Vga
 {
-    // Konstruktor Nvidia, menginisialisasi merk "Nvidia" melalui konstruktor superclass.
+    // Konstruktor Nvidia, menginisialisasi merk "Nvidia" melalui konstruktor superclass
     public Nvidia() : base("Nvidia")
     {
 
@@ -47,70 +47,70 @@ class Processor
     }
 }
 
-// SubClass Intel Turunan Dari SuperClass Processor
+// SubClass Intel Pewarisan Dari SuperClass Processor
 class Intel : Processor
 {
-    // Konstruktor Intel, menginisialisasi merk "Intel" dan tipe melalui konstruktor superclass.
+    // Konstruktor Intel, menginisialisasi merk "Intel" dan tipe melalui konstruktor superclass
     public Intel(string _tipe) : base("Intel", _tipe)
     {
 
     }
 }
 
-// SubClass AMD Turunan Dari SuperClass Processor
+// SubClass AMD Pewarisan Dari SuperClass Processor
 class AMDProcessor : Processor
 {
-    // Konstruktor AMDProcessor, menginisialisasi merk "AMD" dan tipe melalui konstruktor superclass.
+    // Konstruktor AMDProcessor, menginisialisasi merk "AMD" dan tipe melalui konstruktor superclass
     public AMDProcessor(string _tipe) : base("AMD", _tipe)
     {
 
     }
 }
 
-// SubClass CoreI3 Turunan Dari SuperClass Intel & Turunan Dari SuperClass Processor
+// SubClass CoreI3 Pewarisan Dari SuperClass Intel & Pewarisan Dari SuperClass Processor
 class CoreI3 : Intel
 {
-    // Konstruktor CoreI3, menginisialisasi merk "Intel" dan tipe "Core i3" melalui konstruktor superclass.
+    // Konstruktor CoreI3, menginisialisasi merk "Intel" dan tipe "Core i3" melalui konstruktor superclass
     public CoreI3() : base("Core i3")
     {
 
     }
 }
 
-// SubClass CoreI5 Turunan Dari SuperClass Intel & Turunan Dari SuperClass Processor
+// SubClass CoreI5 Pewarisan Dari SuperClass Intel & Pewarisan Dari SuperClass Processor
 class CoreI5 : Intel
 {
-    // Konstruktor CoreI5, menginisialisasi merk "Intel" dan tipe "Core i5" melalui konstruktor superclass.
+    // Konstruktor CoreI5, menginisialisasi merk "Intel" dan tipe "Core i5" melalui konstruktor superclass
     public CoreI5() : base("Core i5")
     {
 
     }
 }
 
-// SubClass CoreI7 Turunan Dari SuperClass Intel & Turunan Dari SuperClass Processor
+// SubClass CoreI7 Pewarisan Dari SuperClass Intel & Pewarisan Dari SuperClass Processor
 class CoreI7 : Intel
 {
-    // Konstruktor CoreI7, menginisialisasi merk "Intel" dan tipe "Core i7" melalui konstruktor superclass.
+    // Konstruktor CoreI7, menginisialisasi merk "Intel" dan tipe "Core i7" melalui konstruktor superclass
     public CoreI7() : base("Core i7")
     {
 
     }
 }
 
-// SubClass Ryzen Turunan Dari SuperClass AMDProcessor & Turunan Dari SuperClass Processor
+// SubClass Ryzen Pewarisan Dari SuperClass AMDProcessor & Pewarisan Dari SuperClass Processor
 class Ryzen : AMDProcessor
 {
-    // Konstruktor Ryzen, menginisialisasi merk "AMD" dan tipe "RAYZEN" melalui konstruktor superclass.
+    // Konstruktor Ryzen, menginisialisasi merk "AMD" dan tipe "RAYZEN" melalui konstruktor superclass
     public Ryzen() : base("RAYZEN")
     {
 
     }
 }
 
-// SubClass Athlon Turunan Dari SuperClass AMDProcessor & Turunan Dari SuperClass Processor
+// SubClass Athlon Pewarisan Dari SuperClass AMDProcessor & Pewarisan Dari SuperClass Processor
 class Athlon : AMDProcessor
 {
-    // Konstruktor Athlon, menginisialisasi merk "AMD" dan tipe "ATHLON" melalui konstruktor superclass.
+    // Konstruktor Athlon, menginisialisasi merk "AMD" dan tipe "ATHLON" melalui konstruktor superclass
     public Athlon() : base("ATHLON")
     {
 
@@ -147,50 +147,50 @@ class Laptop
     }
 }
 
-// SubClass ASUS Turunan Dari SuperClass Laptop
+// SubClass ASUS Pewarisan Dari SuperClass Laptop
 class ASUS : Laptop
 {
-    // Konstruktor ASUS dengan parameter untuk menginisialisasi atribut-atributnya.
+    // Konstruktor ASUS dengan parameter untuk menginisialisasi atribut-atributnya
     public ASUS(string _tipe, Vga _vga, Processor _processor) : base("ASUS", _tipe, _vga, _processor)
     {
 
     }
 }
 
-// SubClass ACER Turunan Dari SuperClass Laptop
+// SubClass ACER Pewarisan Dari SuperClass Laptop
 class ACER : Laptop
 {
-    // Konstruktor ACER dengan parameter untuk menginisialisasi atribut-atributnya.
+    // Konstruktor ACER dengan parameter untuk menginisialisasi atribut-atributnya
     public ACER(string _tipe, Vga _vga, Processor _processor) : base("ACER", _tipe, _vga, _processor)
     {
 
     }
 }
 
-// SubClass Lenovo Turunan Dari SuperClass Laptop
+// SubClass Lenovo Pewarisan Dari SuperClass Laptop
 class Lenovo : Laptop
 {
-    // Konstruktor Lenovo dengan parameter untuk menginisialisasi atribut-atributnya.
+    // Konstruktor Lenovo dengan parameter untuk menginisialisasi atribut-atributnya
     public Lenovo(string _tipe, Vga _vga, Processor _processor) : base("Lenovo", _tipe, _vga, _processor)
     {
 
     }
 }
 
-// SubClass ROG Turunan Dari SuperClass ASUS & Turunan Dari SuperClass Laptop
+// SubClass ROG Pewarisan Dari SuperClass ASUS & Pewarisan Dari SuperClass Laptop
 class ROG : ASUS
 {
-    // Konstruktor ROG dengan parameter untuk menginisialisasi atribut-atributnya.
+    // Konstruktor ROG dengan parameter untuk menginisialisasi atribut-atributnya
     public ROG(Vga _vga, Processor _processor) : base("ROG", _vga, _processor)
     {
 
     }
 }
 
-// SubClass Vivobook Turunan Dari SuperClass ASUS & Turunan Dari SuperClass Laptop
+// SubClass Vivobook Pewarisan Dari SuperClass ASUS & Pewarisan Dari SuperClass Laptop
 class Vivobook : ASUS
 {
-    // Konstruktor Vivobook dengan parameter untuk menginisialisasi atribut-atributnya.
+    // Konstruktor Vivobook dengan parameter untuk menginisialisasi atribut-atributnya
     public Vivobook(Vga _vga, Processor _processor) : base("Vivobook", _vga, _processor)
     {
 
@@ -203,20 +203,20 @@ class Vivobook : ASUS
     }
 }
 
-// SubClass Swift Turunan Dari SuperClass ACER & Turunan Dari SuperClass Laptop
+// SubClass Swift Pewarisan Dari SuperClass ACER & Pewarisan Dari SuperClass Laptop
 class Swift : ACER
 {
-    // Konstruktor Swift dengan parameter untuk menginisialisasi atribut-atributnya.
+    // Konstruktor Swift dengan parameter untuk menginisialisasi atribut-atributnya
     public Swift(Vga _vga, Processor _processor) : base("Swift", _vga, _processor)
     {
 
     }
 }
 
-// SubClass Predator Turunan Dari SuperClass ACER & Turunan Dari SuperClass Laptop
+// SubClass Predator Pewarisan Dari SuperClass ACER & Pewarisan Dari SuperClass Laptop
 class Predator : ACER
 {
-    // Konstruktor Predator dengan parameter untuk menginisialisasi atribut-atributnya.
+    // Konstruktor Predator dengan parameter untuk menginisialisasi atribut-atributnya
     public Predator(Vga _vga, Processor _processor) : base("Predator", _vga, _processor)
     {
 
@@ -229,17 +229,17 @@ class Predator : ACER
     }
 }
 
-// SubClass IdeaPad Turunan Dari SuperClass Lenovo & Turunan Dari SuperClass Laptop
+// SubClass IdeaPad Pewarisan Dari SuperClass Lenovo & Pewarisan Dari SuperClass Laptop
 class IdeaPad : Lenovo
 {
-    // Konstruktor IdeaPad dengan parameter untuk menginisialisasi atribut-atributnya.
+    // Konstruktor IdeaPad dengan parameter untuk menginisialisasi atribut-atributnya
     public IdeaPad(Vga _vga, Processor _processor) : base("IdeaPad", _vga, _processor)
     {
 
     }
 }
 
-// SubClass Legion Turunan Dari SuperClass Lenovo & Turunan Dari SuperClass Laptop
+// SubClass Legion Pewarisan Dari SuperClass Lenovo & Pewarisan Dari SuperClass Laptop
 class Legion : Lenovo
 {
     // Konstruktor Legion dengan parameter untuk menginisialisasi atribut-atributnya.
