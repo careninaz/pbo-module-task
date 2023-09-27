@@ -1,56 +1,112 @@
-﻿//Mendefinisikan class Prosessor dengan atribut merk dan tipe
+// SuperClass Vga
+using System;
+
+class Vga
+{
+    public string merk;
+
+    public Vga(string _merk)
+    {
+        this.merk = _merk;
+    }
+}
+
+// SubClass AMD <- Superclass Vga
+class AMD : Vga
+{
+
+    public AMD() : base("AMD")
+    {
+
+    }
+}
+
+// SubClass Nvidia <- SuperClass Vga
+class Nvidia : Vga
+{
+    public Nvidia() : base("Nvidia")
+    {
+
+    }
+}
+
+// SuperClass Processor
 class Processor
 {
     public string merk;
     public string tipe;
+
+    public Processor(string _merk, string _tipe)
+    {
+        this.merk = _merk;
+        this.tipe = _tipe;
+    }
 }
 
-//Mendefinisikan class Intel (Turunan dari Prosessor dan menginisialisasi merk menjadi "Intel")
+// SubClass Intel <- SuperClass Processor
 class Intel : Processor
 {
-    public Intel(string _tipe)
+    public Intel(string _tipe) : base("Intel", _tipe)
     {
-        base.merk = "Intel";
-        base.tipe = _tipe;
+
     }
 }
 
-//Mendefinisikan class AMD (Turunan dari Prosesor dan menginisialisasi merk mendjadi "AMD")
-class AMD : Processor
+// SubClass AMD <- SuperClass Processor
+class AMDProcessor : Processor
 {
-    public AMD(string _tipe)
+    public AMDProcessor(string _tipe) : base("AMD", _tipe)
     {
-        base.merk = "AMD";
-        base.tipe = _tipe;
+
     }
 }
 
-// Mendefinisikan class Vga dengan atribut merk
-class Vga
+// SubClass CoreI3 <- SuperClass Intel <- SuperClass Processor
+class CoreI3 : Intel
 {
-    public string merk;
-}
-
-// Mendefinisikan class Nvidia (Turunan dari Vga dan menginisialisasi merk menjadi "Nvidia")
-
-class Nvidia : Vga
-{
-    public Nvidia()
+    public CoreI3() : base("Core i3")
     {
-        base.merk = "Nvidia";
+
     }
 }
 
-// Mendefinisikan class AMD_Vga (Turunan dari Vga dan menginisialisasi merk menjadi "AMD")
-class AMD_Vga : Vga
+// SubClass CoreI5 <- SuperClass Intel <- SuperClass Processor
+class CoreI5 : Intel
 {
-    public AMD_Vga()
+    public CoreI5() : base("Core i5")
     {
-        base.merk = "AMD";
+
     }
 }
 
-// Mendefinisikan class Laptop dengan atribut merk, tipe, vga, dan processor
+// SubClass CoreI7 <- SuperClass Intel <- SuperClass Processor
+class CoreI7 : Intel
+{
+    public CoreI7() : base("Core i7")
+    {
+
+    }
+}
+
+// SubClass Ryzen <- SuperClass AMDProcessor <- SuperClass Processor
+class Ryzen : AMDProcessor
+{
+    public Ryzen() : base("RAYZEN")
+    {
+
+    }
+}
+
+// SubClass Athlon <- SuperClass AMDProcessor <- SuperClass Processor
+class Athlon : AMDProcessor
+{
+    public Athlon() : base("ATHLON")
+    {
+
+    }
+}
+
+// SuperClass Laptop
 class Laptop
 {
     public string merk;
@@ -58,56 +114,55 @@ class Laptop
     public Vga vga;
     public Processor processor;
 
-    // Method LaptopDinyalakan untuk menampilkan pesan saat laptop dinyalakan
+    public Laptop(string _merk, string _tipe, Vga _vga, Processor _processor)
+    {
+        this.merk = _merk;
+        this.tipe = _tipe;
+        this.vga = _vga;
+        this.processor = _processor;
+    }
+
+    // Method LaptopDinyalakan() (Instruksi Nomor 2A)
     public void LaptopDinyalakan()
     {
-        Console.WriteLine($"Laptop {merk} {tipe} menyala");
+        Console.WriteLine("Laptop " + merk + " " + tipe + " menyala");
     }
 
-    // Method LaptopDimatikan untuk menampilkan pesan saat laptop dimatikan
+    // Method LaptopDimatikan() (Instruksi Nomor 2B)
     public void LaptopDimatikan()
     {
-        Console.WriteLine($"Laptop {merk} {tipe} mati");
+        Console.WriteLine("Laptop " + merk + " " + tipe + " mati");
     }
 }
 
-// Mendefinisikan class ASUS (Turunan dari Laptop dan menginisialisasi merk menjadi "ASUS")
+// SubClass ASUS <- SuperClass Laptop
 class ASUS : Laptop
 {
-    public ASUS(string _tipe, Vga _vga, Processor _processor)
+    public ASUS(string _tipe, Vga _vga, Processor _processor) : base("ASUS", _tipe, _vga, _processor)
     {
-        base.merk = "ASUS";
-        base.tipe = _tipe;
-        base.vga = _vga;
-        base.processor = _processor;
+
     }
 }
 
-// Mendefinisikan class Acer (Turunan dari Laptop dan menginisialisasi merk menjadi "ACER")
-class Acer : Laptop
+// SubClass ACER <- SuperClass Laptop
+class ACER : Laptop
 {
-    public Acer(string _tipe, Vga _vga, Processor _processor)
+    public ACER(string _tipe, Vga _vga, Processor _processor) : base("ACER", _tipe, _vga, _processor)
     {
-        base.merk = "ACER";
-        base.tipe = _tipe;
-        base.vga = _vga;
-        base.processor = _processor;
+
     }
 }
 
-// Mendefinisikan class Lenovo (Turunan dari Laptop dan menginisialisasi merk menjadi "Lenovo")
+// SubClass Lenovo <- SuperClass Laptop
 class Lenovo : Laptop
 {
-    public Lenovo(string _tipe, Vga _vga, Processor _processor)
+    public Lenovo(string _tipe, Vga _vga, Processor _processor) : base("Lenovo", _tipe, _vga, _processor)
     {
-        base.merk = "Lenovo";
-        base.tipe = _tipe;
-        base.vga = _vga;
-        base.processor = _processor;
+
     }
 }
 
-// Mendefinisikan class ROG (Turunan dari ASUS)
+// SubClass ROG <- SuperClass ASUS <- SuperClass Laptop
 class ROG : ASUS
 {
     public ROG(Vga _vga, Processor _processor) : base("ROG", _vga, _processor)
@@ -116,23 +171,23 @@ class ROG : ASUS
     }
 }
 
-// Mendefinisikan class Vivobook (Turunan dari ASUS dan memiliki method Ngoding)
+// SubClass Vivobook <- SuperClass ASUS <- SuperClass Laptop
 class Vivobook : ASUS
 {
-    public Vivobook(Vga _vga, Processor _processor) : base("Vivobook", _vga, _processor)
+    public Vivobook(Vga _vga, Processor _processor) : base("Vivobook", _tipe, _vga, _processor)
     {
 
     }
 
-    // Method Ngoding untuk menampilkan pesan saat ngoding
+    // Method Ngoding() (Instruksi Nomor 2D)
     public void Ngoding()
     {
-        Console.WriteLine($"Ctak, Ctak, Ctak, error lagi!!");
+        Console.WriteLine("Ctak, Ctak, Ctak, error lagi!!");
     }
 }
 
-// Mendefinisikan class Swift (Turunan dari Acer)
-class Swift : Acer
+// SubClass Swift <- SuperClass ACER <- SuperClass Laptop
+class Swift : ACER
 {
     public Swift(Vga _vga, Processor _processor) : base("Swift", _vga, _processor)
     {
@@ -140,22 +195,22 @@ class Swift : Acer
     }
 }
 
-// Mendefinisikan class Predator (Turunan dari Acer dan memiliki method BermainGame)
-class Predator : Acer
+// SubClass Predator <- SuperClass ACER <- SuperClass Laptop
+class Predator : ACER
 {
     public Predator(Vga _vga, Processor _processor) : base("Predator", _vga, _processor)
     {
 
     }
 
-    // Method BermainGame untuk menampilkan pesan saat bermain game
+    // Method BermainGame() (Instruksi Nomor 2C)
     public void BermainGame()
     {
-        Console.WriteLine($"Laptop {merk} {tipe} sedang memainkan game");
+        Console.WriteLine("Laptop " + merk + " " + tipe + " sedang memainkan game");
     }
 }
 
-// Mendefinisikan class IdeaPad (Turunan dari Lenovo)
+// SubClass IdeaPad <- SuperClass Lenovo <- SuperClass Laptop
 class IdeaPad : Lenovo
 {
     public IdeaPad(Vga _vga, Processor _processor) : base("IdeaPad", _vga, _processor)
@@ -164,7 +219,7 @@ class IdeaPad : Lenovo
     }
 }
 
-// Mendefinisikan class Legion (Turunan dari Lenovo)
+// SubClass Legion <- SuperClass Lenovo <- SuperClass Laptop
 class Legion : Lenovo
 {
     public Legion(Vga _vga, Processor _processor) : base("Legion", _vga, _processor)
@@ -172,6 +227,7 @@ class Legion : Lenovo
 
     }
 }
+
 
 
 class Program
