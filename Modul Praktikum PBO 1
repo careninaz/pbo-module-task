@@ -61,7 +61,7 @@ class AMDProcessor : Processor
     }
 }
 
-// SubClass CoreI3 Turunan Dari SuperClass Intel Turunan Dari SuperClass Processor
+// SubClass CoreI3 Turunan Dari SuperClass Intel & Turunan Dari SuperClass Processor
 class CoreI3 : Intel
 {
     public CoreI3() : base("Core i3")
@@ -70,7 +70,7 @@ class CoreI3 : Intel
     }
 }
 
-// SubClass CoreI5 Turunan Dari SuperClass Intel Turunan Dari SuperClass Processor
+// SubClass CoreI5 Turunan Dari SuperClass Intel & Turunan Dari SuperClass Processor
 class CoreI5 : Intel
 {
     public CoreI5() : base("Core i5")
@@ -79,7 +79,7 @@ class CoreI5 : Intel
     }
 }
 
-// SubClass CoreI7 Turunan Dari SuperClass Intel Turunan Dari SuperClass Processor
+// SubClass CoreI7 Turunan Dari SuperClass Intel & Turunan Dari SuperClass Processor
 class CoreI7 : Intel
 {
     public CoreI7() : base("Core i7")
@@ -88,7 +88,7 @@ class CoreI7 : Intel
     }
 }
 
-// SubClass Ryzen Turunan Dari SuperClass AMDProcessor Turunan Dari SuperClass Processor
+// SubClass Ryzen Turunan Dari SuperClass AMDProcessor & Turunan Dari SuperClass Processor
 class Ryzen : AMDProcessor
 {
     public Ryzen() : base("RAYZEN")
@@ -97,7 +97,7 @@ class Ryzen : AMDProcessor
     }
 }
 
-// SubClass Athlon Turunan Dari SuperClass AMDProcessor Turunan Dari SuperClass Processor
+// SubClass Athlon Turunan Dari SuperClass AMDProcessor & Turunan Dari SuperClass Processor
 class Athlon : AMDProcessor
 {
     public Athlon() : base("ATHLON")
@@ -162,7 +162,7 @@ class Lenovo : Laptop
     }
 }
 
-// SubClass ROG Turunan Dari SuperClass ASUS Turunan Dari SuperClass Laptop
+// SubClass ROG Turunan Dari SuperClass ASUS & Turunan Dari SuperClass Laptop
 class ROG : ASUS
 {
     public ROG(Vga _vga, Processor _processor) : base("ROG", _vga, _processor)
@@ -171,7 +171,7 @@ class ROG : ASUS
     }
 }
 
-// SubClass Vivobook Turunan Dari SuperClass ASUS Turunan Dari SuperClass Laptop
+// SubClass Vivobook Turunan Dari SuperClass ASUS & Turunan Dari SuperClass Laptop
 class Vivobook : ASUS
 {
     public Vivobook(Vga _vga, Processor _processor) : base( "Vivobook", _vga, _processor)
@@ -186,7 +186,7 @@ class Vivobook : ASUS
     }
 }
 
-// SubClass Swift Turunan Dari SuperClass ACER Turunan Dari SuperClass Laptop
+// SubClass Swift Turunan Dari SuperClass ACER & Turunan Dari SuperClass Laptop
 class Swift : ACER
 {
     public Swift(Vga _vga, Processor _processor) : base("Swift", _vga, _processor)
@@ -195,7 +195,7 @@ class Swift : ACER
     }
 }
 
-// SubClass Predator Turunan Dari SuperClass ACER Turunan Dari SuperClass Laptop
+// SubClass Predator Turunan Dari SuperClass ACER & Turunan Dari SuperClass Laptop
 class Predator : ACER
 {
     public Predator(Vga _vga, Processor _processor) : base("Predator", _vga, _processor)
@@ -210,7 +210,7 @@ class Predator : ACER
     }
 }
 
-// SubClass IdeaPad Turunan Dari SuperClass Lenovo Turunan Dari SuperClass Laptop
+// SubClass IdeaPad Turunan Dari SuperClass Lenovo & Turunan Dari SuperClass Laptop
 class IdeaPad : Lenovo
 {
     public IdeaPad(Vga _vga, Processor _processor) : base("IdeaPad", _vga, _processor)
@@ -219,7 +219,7 @@ class IdeaPad : Lenovo
     }
 }
 
-// SubClass Legion Turunan Dari SuperClass Lenovo Turunan Dari SuperClass Laptop
+// SubClass Legion Turunan Dari SuperClass Lenovo & Turunan Dari SuperClass Laptop
 class Legion : Lenovo
 {
     public Legion(Vga _vga, Processor _processor) : base("Legion", _vga, _processor)
